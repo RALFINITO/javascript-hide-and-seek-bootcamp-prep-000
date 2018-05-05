@@ -23,10 +23,10 @@ function deepestChild(){
 
 
 function drillDown(element, level){
+  level = level + 1
   if(element.children.length ===  0){
     return {element: element, level: level}
   }
-  level = level + 1
   for(let i = 0; i < element.children.length; i++){
     var child = element.children[i]
     var drillChild = drillDown(child, level)
